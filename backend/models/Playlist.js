@@ -18,6 +18,11 @@ const playlistSchema = new mongoose.Schema({
     ref: 'User',
     default: null,
   },
-});
+  // TODO: Implementera delningen.
+  sharedWith: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }],
+}, { timestamps: true });
 
 export default mongoose.model('Playlist', playlistSchema);
