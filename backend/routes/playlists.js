@@ -1,7 +1,8 @@
 import { Router } from 'express';
 import Playlist from '../models/Playlist.js';
 import { requireAuth } from '../middleware/auth.js';
-import { isPlaylistOwner } from '../middleware/ownership.js';
+import { isPlaylistOwner, isPlaylistSharedWithUser } from '../middleware/ownership.js';
+import User from '../models/User.js';
 
 const router = Router();
 
