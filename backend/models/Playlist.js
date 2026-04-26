@@ -20,7 +20,7 @@ const playlistSchema = new mongoose.Schema({
   },
   // TODO: Implementera delningen.
   sharedWith: [{
-    type: mongoose.Schema.types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   }],
 }, { timestamps: true });
